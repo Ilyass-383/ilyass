@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>avant : <span id="p1"></span></p>
+<div ><p>apret:</p><div id="p2"> </div> </div>
+<div ><p>apret l'ajout: </p><div id="p3"> </div> </div>
+ <script>
+  const matieres=['js','Uninx','php','SGBD','BI','ML','AI','LaTeX'];
+  document.getElementById("p1").innerHTML=matieres ;
+  matieres.pop() ;
+  list ='<ul>';
+    for(var i=0 ;i<matieres.length;i++ ) {
+        list+= '<li>'+matieres[i]+ '</li>'
+    }
+    list+='</ul>'
+  document.getElementById("p2").innerHTML=list ;
+
+  matieres.unshift("python") ;
+  list ='<ul>';
+    for(var i=0 ;i<matieres.length;i++ ) {
+        list+= '<li>'+matieres[i]+ '</li>'
+    }
+    list+='</ul>'
+  document.getElementById("p3").innerHTML=list ;
+  alert('le nbr des elements est '+matieres.length) ;
+  </script>   
+</body>
+</html>
